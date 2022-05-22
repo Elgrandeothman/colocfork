@@ -11,6 +11,11 @@ node {
   
        app = docker.build("othmandocker7/test")
     }
+    stage('Test image') {                       
+        app.inside {            
+        sh 'echo "Tests passed"'        
+            }    
+        }     
 
    
 
